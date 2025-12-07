@@ -1,0 +1,74 @@
+=== SHEET: PC Desktop ===
+
+--- TABLE: Monitor ---
+Model,Harga (Ribuan)
+iMac 24",3500
+iMac 27",4500
+Mac Mini,0
+Mac Studio,0
+HP All-in-One,1500
+Dell All-in-One,1600
+Lenovo All-in-One,1400
+Custom Gaming PC,1200
+Office PC Build,800
+
+--- TABLE: Motherboard ---
+Model,Harga (Ribuan)
+iMac 24",2500
+iMac 27",3000
+Mac Mini,1500
+Mac Studio,2000
+HP All-in-One,1200
+Dell All-in-One,1300
+Lenovo All-in-One,1100
+Custom Gaming PC,800
+Office PC Build,500
+
+--- TABLE: RAM ---
+Model,Harga (Ribuan)
+iMac 24",800
+iMac 27",1000
+Mac Mini,600
+Mac Studio,1200
+HP All-in-One,400
+Dell All-in-One,450
+Lenovo All-in-One,380
+Custom Gaming PC,350
+Office PC Build,250
+
+--- TABLE: SSD/HDD ---
+Model,Harga (Ribuan)
+iMac 24",1000
+iMac 27",1200
+Mac Mini,800
+Mac Studio,1500
+HP All-in-One,500
+Dell All-in-One,550
+Lenovo All-in-One,480
+Custom Gaming PC,400
+Office PC Build,300
+
+--- TABLE: Power Supply ---
+Model,Harga (Ribuan)
+iMac 24",600
+iMac 27",700
+Mac Mini,400
+Mac Studio,800
+HP All-in-One,350
+Dell All-in-One,380
+Lenovo All-in-One,330
+Custom Gaming PC,300
+Office PC Build,200
+
+--- TABLE: GPU ---
+Model,Harga (Ribuan)
+iMac 24",2000
+iMac 27",2500
+Mac Mini,0
+Mac Studio,3000
+HP All-in-One,1000
+Dell All-in-One,1100
+Lenovo All-in-One,950
+Custom Gaming PC,1500
+Office PC Build,600
+
