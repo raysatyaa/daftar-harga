@@ -907,7 +907,7 @@
             <button class="alert-btn" onclick="closeAlertModal(); openConsultationModal();">
                 💬 Hubungi WhatsApp
             </button>
-            <button class="alert-btn" onclick="closeAlertModal()" style="background: rgba(255,255,255,0.1); margin-left: 10px;">
+            <button class="alert-btn" onclick="continueAfterAlert()" style="background: rgba(255,255,255,0.1); margin-left: 10px;">
                 Lanjutkan
             </button>
         </div>
@@ -1428,6 +1428,8 @@
             }
         }
 
+        let pendingGadgetSelection = null; // Simpan gadget yang dipilih saat alert muncul
+
         function selectGadget(type, cardElement) {
             currentGadget = type;
             
@@ -1438,13 +1440,22 @@
                     'laptop': 'Laptop',
                     'pc': 'PC Desktop'
                 };
+                // Simpan informasi gadget yang dipilih
+                pendingGadgetSelection = { type, cardElement };
                 showAlertModal(gadgetNames[type]);
                 return; // Jangan lanjutkan jika ada alert
             }
             
+            // Lanjutkan proses seleksi untuk iPhone
+            continueGadgetSelection(type, cardElement);
+        }
+
+        function continueGadgetSelection(type, cardElement) {
             // Update UI
             document.querySelectorAll('#gadgetCards .card').forEach(c => c.classList.remove('selected'));
-            cardElement.classList.add('selected');
+            if (cardElement) {
+                cardElement.classList.add('selected');
+            }
             
             // Update steps
             updateStep(2);
@@ -1464,6 +1475,16 @@
 
         function closeAlertModal() {
             document.getElementById('alertModal').classList.remove('active');
+        }
+
+        function continueAfterAlert() {
+            closeAlertModal();
+            // Lanjutkan proses seleksi jika ada pending selection
+            if (pendingGadgetSelection) {
+                const { type, cardElement } = pendingGadgetSelection;
+                continueGadgetSelection(type, cardElement);
+                pendingGadgetSelection = null; // Reset setelah digunakan
+            }
         }
 
         function openConsultationModal() {
